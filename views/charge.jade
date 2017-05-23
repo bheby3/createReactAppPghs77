@@ -1,0 +1,17 @@
+h2 You successfully paid <strong>$5.00</strong>!
+
+
+head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  .center
+    form(method="POST", action="/charged")
+    article
+        label Amount: $5.00
+        script(
+        src="//checkout.stripe.com/v2/checkout.js",
+        class="stripe-button",
+        data-key='pk_test_BrM6NY0gVzfXoWtWNnWbZkf3',
+        data-locale="auto",
+        data-description="Sample Charge",
+        data-amount="500")
